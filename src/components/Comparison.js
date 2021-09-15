@@ -104,7 +104,11 @@ const Comparison = ({ comparison, fiat }) => {
   if (comparison === "") {
     return (
       <div className="welcome">
-        <p>Please select parameters to compare the currencies by!</p>
+        <a className="link" href="https://nomics.com" rel="dofollow">
+          <p className="linkText">
+            Crypto Market Cap & Pricing Data Provided By Nomics
+          </p>
+        </a>
       </div>
     );
   } else if (comparison === "market_cap_dominance") {

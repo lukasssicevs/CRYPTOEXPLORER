@@ -98,7 +98,11 @@ const CurrencyData = ({ currency, fiat }) => {
   if (currency === "") {
     return (
       <div className="welcome">
-        <p>Please select individual currency for analysis!</p>
+        <a className="link" href="https://nomics.com" rel="dofollow">
+          <p className="linkText">
+            Crypto Market Cap & Pricing Data Provided By Nomics
+          </p>
+        </a>
         <a id="logo"></a>
       </div>
     );
