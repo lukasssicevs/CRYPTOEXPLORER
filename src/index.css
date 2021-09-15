@@ -45,6 +45,30 @@ h1 {
   margin: 0;
 }
 
+.link {
+  text-decoration: none;
+  font-size: 30px;
+  width: 90%;
+  margin: auto;
+  margin-top: 120px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  color: var(--yellow);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.473);
+  background-color: rgba(68, 58, 58, 0.205);
+}
+
+.link:hover {
+  background-color: rgba(112, 108, 108, 0.096);
+  color: var(--lightYellow);
+}
+
+.linkText {
+  font-size: 40px;
+}
+
 #fiat {
   position: relative;
   float: left;
@@ -538,6 +562,10 @@ td {
 }
 
 @media only screen and (max-width: 1400px) {
+  .link {
+    margin-top: 20px;
+  }
+
   body {
     height: 100vw;
   }
@@ -752,6 +780,10 @@ td {
 }
 
 @media only screen and (max-width: 650px) {
+  .linkText {
+    font-size: 35px;
+  }
+
   h3 {
     font-size: 18px;
   }
@@ -807,6 +839,9 @@ td {
 }
 
 @media only screen and (max-width: 480px) {
+  .links {
+  }
+
   input:checked + .darkSlider:before {
     -webkit-transform: translateX(70%);
     -ms-transform: translateX(70%);
