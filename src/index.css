@@ -615,7 +615,6 @@ td {
     width: 100%;
     align-items: flex-start;
     padding-top: 0px;
-    margin-top: 50px;
   }
 
   #data {
@@ -831,7 +830,7 @@ td {
 
 @media only screen and (max-width: 520px) {
   h3 {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   #exWa {
@@ -899,11 +898,19 @@ td {
     margin-top: 25px;
     font-size: 30px;
   }
+
+  #currencyData {
+    margin-top: 50px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
 }
 
 @media only screen and (max-width: 465px) {
   h3 {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   #exWa {
