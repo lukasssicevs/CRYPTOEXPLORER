@@ -722,7 +722,7 @@ td {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     grid-gap: 10px;
     margin-top: 0px;
-    width: 76%;
+    width: 80%;
   }
 
   .items {
@@ -735,7 +735,7 @@ td {
     grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
     grid-gap: 10px;
     margin-top: 0px;
-    width: 58%;
+    width: 80%;
   }
 
   .items {
@@ -748,7 +748,7 @@ td {
     grid-template-columns: repeat(auto-fit, minmax(102px, 1fr));
     grid-gap: 10px;
     margin-top: 0px;
-    width: 60%;
+    width: 80%;
   }
 
   .items {
@@ -758,14 +758,14 @@ td {
 
 @media only screen and (max-width: 860px) {
   #exWa {
-    grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     grid-gap: 10px;
     margin-top: 0px;
-    width: 56%;
+    width: 80%;
   }
 
   .items {
-    height: 92px;
+    height: 90px;
   }
 }
 
@@ -776,14 +776,14 @@ td {
     transform: translateX(80%);
   }
   #exWa {
-    grid-template-columns: repeat(auto-fit, minmax(98px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
     grid-gap: 10px;
     margin-top: 0px;
-    width: 70%;
+    width: 90%;
   }
 
   .items {
-    height: 98px;
+    height: 88px;
   }
 }
 
@@ -838,7 +838,7 @@ td {
     grid-template-columns: repeat(auto-fit, minmax(86px, 1fr));
     grid-gap: 10px;
     margin-top: 0px;
-    width: 70%;
+    width: 80%;
   }
 
   .items {
