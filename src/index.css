@@ -662,10 +662,6 @@ td {
     font-size: 30px;
   }
 
-  .dominance {
-    height: 220px;
-  }
-
   #exWa {
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     grid-gap: 10px;
@@ -675,6 +671,10 @@ td {
 
   .items {
     height: 130px;
+  }
+
+  .dominance {
+    height: 160px;
   }
 
   /* #exWa{
