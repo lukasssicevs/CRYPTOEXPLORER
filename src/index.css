@@ -257,7 +257,8 @@ span {
 
 .label {
   display: inline-block;
-  height: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   width: 100%;
   background-color: rgba(87, 44, 27, 0.5);
   border-radius: 3px;
@@ -281,7 +282,8 @@ span {
 
 .darkLabel {
   display: inline-block;
-  height: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   width: 100%;
   background-color: rgba(105, 7, 105, 0.459);
   border-radius: 3px;
