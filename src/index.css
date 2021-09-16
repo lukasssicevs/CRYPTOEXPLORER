@@ -840,7 +840,8 @@ td {
 }
 
 @media only screen and (max-width: 480px) {
-  .links {
+  .header {
+    font-size: 24px;
   }
 
   input:checked + .darkSlider:before {
