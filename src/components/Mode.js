@@ -10,7 +10,7 @@ const Mode = () => {
 
   useEffect(() => {
     if (!mode) {
-      document.documentElement.style.backgroundImage =
+      document.getElementById("bg").style.backgroundImage =
         "linear-gradient(180deg,var(--lightPink), var(--darkPurple))";
       document.documentElement.style.color = "var(--light)";
       document.getElementById("exwa").classList.remove("label");
@@ -22,7 +22,8 @@ const Mode = () => {
       document.getElementById("theme").classList.remove("slider");
       document.getElementById("theme").classList.add("darkSlider");
     } else {
-      document.documentElement.style = "initial";
+      document.getElementById("bg").style = "initial";
+      document.documentElement.style.color = "initial";
       document.getElementById("exwa").classList.remove("darkLabel");
       document.getElementById("exwa").classList.add("label");
       document.getElementById("comp").classList.remove("darkLabel");

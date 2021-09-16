@@ -88,13 +88,6 @@ const CurrencyData = ({ currency, fiat }) => {
     changeLink();
   }, [currency, fiat]);
 
-  useEffect(() => {
-    document.getElementById("logo").style.backgroundImage = `url('${logo}')`;
-    document.getElementById("logo").style.backgroundSize = `50%`;
-    document.getElementById("logo").style.backgroundRepeat = `no-repeat`;
-    document.getElementById("logo").style.backgroundPosition = `center`;
-  }, [logo]);
-
   if (currency === "") {
     return (
       <div className="welcome">
@@ -118,7 +111,9 @@ const CurrencyData = ({ currency, fiat }) => {
         <h3>Daily Volume- {volume}</h3>
         <h3>Token limit- {limits}</h3>
       </div>
-      <a id="logo" href={link}></a>
+      <a id="website" href={link}>
+        <img id="logo" src={logo} />
+      </a>
     </div>
   );
 };

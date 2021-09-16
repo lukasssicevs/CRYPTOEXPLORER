@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="bg"></div>
+      <div id="bg"></div>
       <Mode />
       <Fiat pickFiat={pickFiat} />
       <Header />
