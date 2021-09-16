@@ -17,13 +17,17 @@
   letter-spacing: 1px;
 }
 
-html {
-  overflow: hidden;
+.bg {
+  position: absolute;
   background-image: linear-gradient(var(--lightYellow), var(--darkBrown));
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+}
+
+html {
   color: var(--dark);
   margin: 0;
-  height: 100%;
-  background-size: 100% 100%;
 }
 
 body {
@@ -574,10 +578,6 @@ td {
     margin-top: 20px;
   }
 
-  body {
-    height: 100vw;
-  }
-
   .header {
     font-size: 28px;
   }
@@ -619,7 +619,7 @@ td {
 
   #data {
     width: 55%;
-    line-height: 8px;
+    line-height: 6px;
     height: 100%;
     margin-left: 5%;
   }
@@ -830,7 +830,7 @@ td {
 
 @media only screen and (max-width: 520px) {
   h3 {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   #exWa {
@@ -904,13 +904,13 @@ td {
   }
 
   h3 {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
 @media only screen and (max-width: 465px) {
   h3 {
-    font-size: 14px;
+    font-size: 11px;
   }
 
   #exWa {
@@ -923,7 +923,4 @@ td {
   .items {
     height: 70px;
   }
-}
-
-@media only screen and (max-width: 465px) {
 }
