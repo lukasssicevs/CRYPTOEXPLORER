@@ -241,7 +241,6 @@ input:checked + .darkSlider:before {
   margin-right: 0;
   margin-bottom: 30px;
   margin-top: 20px;
-  height: 40px;
 }
 
 input[type="radio"] {
@@ -268,6 +267,9 @@ span {
   color: var(--yellow);
   font-size: 22px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .label:hover {
@@ -289,6 +291,9 @@ span {
   color: var(--yellow);
   font-size: 22px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .darkLabel:hover {
@@ -845,7 +850,27 @@ td {
   }
 
   .header {
-    font-size: 10px;
+    font-size: 20px;
+  }
+
+  #selectContainer {
+    height: 200px;
+  }
+
+  .label {
+    font-size: 16px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .darkLabel {
+    font-size: 16px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   input:checked + .darkSlider:before {
@@ -896,7 +921,4 @@ td {
 }
 
 @media only screen and (max-width: 465px) {
-  .header {
-    font-size: 10px;
-  }
 }
