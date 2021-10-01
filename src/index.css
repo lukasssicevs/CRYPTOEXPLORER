@@ -1,32 +1,32 @@
 :root {
-  --darkBrown: rgb(117, 55, 30);
-  --lightYellow: rgb(245, 200, 141);
-  --dark: rgb(61, 34, 4);
-  --light: rgb(219, 199, 219);
-  --brown: rgba(117, 55, 30, 0.753);
-  --yellow: rgb(243, 172, 79);
-  --shadow: rgb(7, 7, 7, 0.5);
-  --hoverShadow: rgb(7, 7, 7, 1);
-  --darkPurple: rgb(39, 8, 75);
-  --lightPink: rgb(185, 83, 206);
-  --inputColor: rgba(48, 18, 9, 0);
+  --pink: rgb(228, 19, 118);
+  --bordo: rgb(146, 68, 105);
+  --lightPink: rgb(255, 192, 203);
+  --neonBlue: rgb(1, 200, 238);
+  --neonBlueT: rgba(1, 198, 238, 0.397);
+  --lightNeonBlue: rgba(202, 236, 243, 0.788);
+  --darkBlue: rgb(16, 27, 55);
+  --lightBlue: rgb(85, 106, 158);
+  --lightBlueT: rgba(85, 106, 158, 0.596);
+  --darkWhite: rgb(204, 204, 204);
+  --white: rgb(255, 255, 255);
 }
 
 * {
-  font-family: "Megrim", cursive;
+  font-family: "Titillium Web", sans-serif;
   letter-spacing: 1px;
 }
 
 #bg {
   position: fixed;
-  background-image: linear-gradient(var(--lightYellow), var(--darkBrown));
+  background-image: linear-gradient(var(--darkBlue) 60%, var(--pink));
   height: 100%;
   width: 100%;
   z-index: -10;
 }
 
 html {
-  color: var(--dark);
+  color: var(--white);
   margin: 0;
 }
 
@@ -51,6 +51,7 @@ p {
 
 h1 {
   margin: 0;
+  text-shadow: 3px 3px var(--pink), -3px -3px var(--neonBlue);
 }
 
 .link {
@@ -63,15 +64,15 @@ h1 {
   display: flex;
   justify-content: center;
   align-self: center;
-  color: var(--yellow);
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.473);
-  background-color: rgba(68, 58, 58, 0.205);
+  color: var(--darkBlue);
+  transition: 0.2s;
+  background-color: var(--lightBlueT);
   transition: 0.1s;
 }
 
 .link:hover {
-  background-color: rgba(112, 108, 108, 0.096);
-  color: var(--lightYellow);
+  transform: scale(1.05);
+  transition: 0.4s;
 }
 
 .linkText {
@@ -97,6 +98,42 @@ h1 {
   cursor: pointer;
 }
 
+#fiatLabel {
+  color: var(--lightBlue);
+}
+
+.lightFiat {
+  box-shadow: 0 0 20px var(--shadow);
+  transition: 0.9s;
+  border: 3px solid transparent;
+  background: linear-gradient(var(--darkBlue), var(--darkBlue)) padding-box,
+    linear-gradient(to bottom, var(--neonBlue), var(--pink)) border-box;
+  width: 50%;
+  height: 55%;
+  border-radius: 20px;
+  color: var(--white);
+}
+
+.lightFiat option {
+  background-color: var(--darkBlue);
+}
+
+.darkFiat {
+  box-shadow: 0 0 20px var(--shadow);
+  transition: 0.9s;
+  border: 3px solid transparent;
+  background: linear-gradient(var(--lightPink), var(--lightPink)) padding-box,
+    linear-gradient(to bottom, var(--neonBlue), var(--pink)) border-box;
+  width: 50%;
+  height: 55%;
+  border-radius: 20px;
+  color: var(--darkBlue);
+}
+
+.darkFiat option {
+  background-color: var(--lightPink);
+}
+
 #mode {
   position: relative;
   float: right;
@@ -104,12 +141,8 @@ h1 {
   width: 10%;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-#modeLabel {
-  font-weight: bold;
-  font-size: 20px;
+  justify-content: flex-end;
+  margin-right: 1.5%;
 }
 
 /* The switch - the box around the slider */
@@ -135,10 +168,13 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(117, 55, 30, 0.6);
+  background-color: rgba(255, 255, 255, 0);
   -webkit-transition: 0.8s;
   transition: 0.8s;
   border-radius: 18px;
+  border: 3px solid transparent;
+  background: linear-gradient(var(--darkBlue), var(--darkBlue)) padding-box,
+    linear-gradient(to bottom, var(--neonBlue), var(--pink)) border-box;
 }
 
 .slider:before {
@@ -148,23 +184,10 @@ h1 {
   width: 50%;
   left: 4px;
   bottom: 4px;
-  background-color: var(--yellow);
+  background-image: linear-gradient(to bottom, var(--neonBlue), var(--pink));
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 14px;
-}
-
-input + .slider {
-  box-shadow: 0 0 20px var(--shadow);
-}
-
-input:checked + .slider {
-  box-shadow: 0 0 20px var(--shadow);
-}
-
-input:hover + .slider {
-  box-shadow: 0 0 20px var(--hoverShadow);
-  background-color: var(--darkBrown);
 }
 
 input:checked + .slider:before {
@@ -180,10 +203,12 @@ input:checked + .slider:before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(17, 1, 17, 0.425);
   -webkit-transition: 0.8s;
   transition: 0.8s;
   border-radius: 18px;
+  border: 3px solid transparent;
+  background: linear-gradient(var(--lightPink), var(--lightPink)) padding-box,
+    linear-gradient(to bottom, var(--neonBlue), var(--pink)) border-box;
 }
 
 .darkSlider:before {
@@ -191,9 +216,9 @@ input:checked + .slider:before {
   content: "";
   height: 80%;
   width: 50%;
-  left: 4px;
+  left: 1px;
   bottom: 4px;
-  background-color: var(--yellow);
+  background-image: linear-gradient(to bottom, var(--neonBlue), var(--pink));
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 14px;
@@ -209,28 +234,12 @@ input:checked + .darkSlider {
 
 input:hover + .darkSlider {
   box-shadow: 0 0 20px var(--hoverShadow);
-  background-color: var(--darkPurple);
 }
 
 input:checked + .darkSlider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-}
-
-#selectFiat {
-  box-shadow: 0 0 20px var(--shadow);
-  background-color: var(--yellow);
-  transition: 0.9s;
-  border: var(--yellow) solid 0.1px;
-  width: 40%;
-  height: 40%;
-  border-radius: 20px;
-}
-
-#selectFiat:hover {
-  box-shadow: 0 0 20px var(--hoverShadow);
-  transition: 0.4s;
 }
 
 #display {
@@ -268,24 +277,27 @@ span {
   padding-top: 5px;
   padding-bottom: 5px;
   width: 100%;
-  background-color: rgba(87, 44, 27, 0.5);
-  border-radius: 3px;
+  border-radius: 10px;
   margin-right: 6px;
   margin-left: 6px;
   transition: 1.6s;
-  color: var(--yellow);
+  color: var(--darkWhite);
   font-size: 22px;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 3px solid transparent;
+  background: linear-gradient(var(--darkBlue), var(--darkBlue)) padding-box,
+    linear-gradient(to bottom, var(--neonBlue), var(--pink)) border-box;
 }
 
 .label:hover {
-  background-color: var(--darkBrown);
+  background: linear-gradient(var(--lightBlueT), var(--lightBlueT)) padding-box,
+    linear-gradient(to bottom, var(--neonBlue), var(--pink)) border-box;
   transform: scale(1.02, 1.02);
   transition: 0.4s;
-  color: var(--lightYellow);
+  color: var(--white);
 }
 
 .darkLabel {
@@ -293,12 +305,14 @@ span {
   padding-top: 5px;
   padding-bottom: 5px;
   width: 100%;
-  background-color: rgba(105, 7, 105, 0.459);
-  border-radius: 3px;
+  border: 3px solid transparent;
+  background: linear-gradient(var(--lightPink), var(--lightPink)) padding-box,
+    linear-gradient(to bottom, var(--neonBlue), var(--pink)) border-box;
+  border-radius: 10px;
   margin-right: 6px;
   margin-left: 6px;
   transition: 1.6s;
-  color: var(--yellow);
+  color: var(--lightBlue);
   font-size: 22px;
   font-weight: bold;
   display: flex;
@@ -307,27 +321,33 @@ span {
 }
 
 .darkLabel:hover {
-  background-color: var(--darkPurple);
+  background: linear-gradient(var(--lightNeonBlue), var(--lightNeonBlue))
+      padding-box,
+    linear-gradient(to bottom, var(--neonBlue), var(--pink)) border-box;
   transform: scale(1.02, 1.02);
   transition: 0.4s;
-  color: var(--lightYellow);
+  color: var(--darkBlue);
 }
 
 input[type="radio"]:checked + .label {
-  background-color: var(--darkBrown);
+  background: linear-gradient(var(--lightBlueT), var(--lightBlueT)) padding-box,
+    linear-gradient(to bottom, var(--neonBlue), var(--pink)) border-box;
   transform: scale(1.02, 1.02);
-  color: var(--lightYellow);
+  color: var(--white);
 }
 
 input[type="radio"]:checked + .darkLabel {
-  background-color: var(--darkPurple);
+  background: linear-gradient(var(--lightNeonBlue), var(--lightNeonBlue))
+      padding-box,
+    linear-gradient(to bottom, var(--neonBlue), var(--pink)) border-box;
   transform: scale(1.02, 1.02);
-  color: var(--lightYellow);
+  color: var(--darkBlue);
 }
 
 .picker {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 26px;
+  color: var(--lightBlue);
 }
 
 .welcome {
@@ -341,23 +361,20 @@ h3 {
 
 #cryptoInput {
   box-shadow: 0 0 20px var(--shadow);
-  background-color: var(--yellow);
+  background-color: var(--lightBlueT);
   transition: 0.9s;
-  border: var(--yellow) solid 0.1px;
+  border: var(--lightBlueT) solid 0px;
   width: 20%;
   height: 40%;
-  border-radius: 20px;
-}
-
-#cryptoInput:hover {
-  box-shadow: 0 0 20px var(--hoverShadow);
-  transition: 0.4s;
+  border-radius: 5px;
+  color: var(--white);
 }
 
 #currencyData {
+  margin-top: 4%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 #data {
@@ -367,6 +384,23 @@ h3 {
   justify-content: center;
   align-items: flex-start;
   line-height: 20px;
+}
+
+#indvData {
+  background-color: var(--lightBlueT);
+  padding: 3%;
+  border-radius: 8px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  transition: 0.2s;
+  cursor: default;
+  width: 100%;
+  text-align: left;
+}
+
+#indvData:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
 }
 
 #website {
@@ -391,18 +425,12 @@ h3 {
 }
 
 #comparison {
-  box-shadow: 0 0 20px var(--shadow);
-  background-color: var(--yellow);
-  transition: 0.9s;
-  border: var(--yellow) solid 0.1px;
+  background-color: var(--lightBlueT);
+  border: var(--lightBlueT) solid 0px;
   width: 20%;
   height: 40%;
-  border-radius: 20px;
-}
-
-#comparison:hover {
-  box-shadow: 0 0 20px var(--hoverShadow);
-  transition: 0.4s;
+  border-radius: 5px;
+  color: var(--darkBlue);
 }
 
 .compList {
@@ -413,27 +441,33 @@ h3 {
 
 table {
   margin: auto;
-  width: 30%;
+  width: 45%;
   border-spacing: 10px;
 }
 
 td {
-  height: 30px;
+  height: 50px;
   font-weight: bold;
 }
 
+td:hover {
+  transform: scale(1.2);
+  transition: 0.1s;
+  cursor: default;
+}
+
 .position {
-  background-color: rgba(199, 231, 125, 0.25);
+  background-color: var(--lightBlueT);
   border-radius: 6px;
 }
 
 .name {
-  background-color: rgba(199, 231, 125, 0.25);
+  background-color: var(--lightBlueT);
   border-radius: 6px;
 }
 
 .result {
-  background-color: rgba(131, 160, 63, 0.25);
+  background-color: var(--lightBlueT);
   border-radius: 6px;
 }
 
@@ -457,7 +491,7 @@ td {
 .dominion {
   opacity: 0.5;
   cursor: pointer;
-  filter: grayscale(80%);
+  filter: grayscale(100%);
 }
 
 .dominion:hover {
@@ -482,9 +516,8 @@ td {
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  color: var(--yellow);
-  border-radius: 25%;
-  transition: 1.4s;
+  border-radius: 25px;
+  transition: 0.4s;
   width: 100%;
   height: 160px;
 }
@@ -492,7 +525,7 @@ td {
 .items:hover {
   opacity: 1;
   filter: blur(0px);
-  transition: 0.4s;
+  transition: 0.2s;
   transform: scale(1.1, 1.1);
 }
 
@@ -581,6 +614,15 @@ td {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(128, 128, 128, 0.747);
+}
+
+@media only screen and (max-width: 1450px) {
+  #exWa {
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    grid-gap: 10px;
+    margin-top: 60px;
+    width: 70%;
+  }
 }
 
 @media only screen and (max-width: 1400px) {
@@ -722,6 +764,12 @@ td {
   .items {
     height: 120px;
   }
+
+  .compList {
+    margin-top: 30px;
+    overflow-y: scroll;
+    height: 255px;
+  }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -739,6 +787,23 @@ td {
 
   .items {
     height: 120px;
+  }
+
+  .compList {
+    margin-top: 100px;
+    overflow-y: scroll;
+    height: 620px;
+  }
+
+  table {
+    margin: auto;
+    width: 60%;
+    border-spacing: 10px;
+  }
+
+  td {
+    height: 60px;
+    font-weight: bold;
   }
 }
 
@@ -766,6 +831,17 @@ td {
   .items {
     height: 102px;
   }
+
+  table {
+    margin: auto;
+    width: 60%;
+    border-spacing: 10px;
+  }
+
+  td {
+    height: 40px;
+    font-weight: bold;
+  }
 }
 
 @media only screen and (max-width: 860px) {
@@ -778,6 +854,31 @@ td {
 
   .items {
     height: 90px;
+  }
+
+  #currencyData {
+    margin-top: 70px;
+  }
+
+  #indvData {
+    padding: 5%;
+  }
+
+  .compList {
+    margin-top: 30px;
+    overflow-y: scroll;
+    height: 420px;
+  }
+
+  table {
+    margin: auto;
+    width: 60%;
+    border-spacing: 10px;
+  }
+
+  td {
+    height: 40px;
+    font-weight: bold;
   }
 }
 
@@ -805,6 +906,12 @@ td {
 
   h3 {
     font-size: 18px;
+  }
+
+  .compList {
+    margin-top: 30px;
+    overflow-y: scroll;
+    height: 240px;
   }
 }
 
@@ -857,6 +964,12 @@ td {
   }
   h3 {
     font-size: 15px;
+  }
+
+  table {
+    margin: auto;
+    width: 80%;
+    border-spacing: 10px;
   }
 }
 
@@ -921,8 +1034,14 @@ td {
     -ms-transform: translateX(70%);
     transform: translateX(70%);
   }
-  .compList {
-    height: 280px;
+
+  table {
+    border-spacing: 6px;
+  }
+
+  td {
+    height: 40px;
+    font-weight: bold;
   }
 
   #exWa {
@@ -942,7 +1061,11 @@ td {
   }
 
   #currencyData {
-    margin-top: 50px;
+    margin-top: 70px;
+  }
+
+  #indvData {
+    padding: 5%;
   }
 
   h3 {

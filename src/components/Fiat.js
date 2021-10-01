@@ -5,6 +5,7 @@ const Fiat = ({ pickFiat }) => {
       <select
         name="selectFiat"
         id="selectFiat"
+        className="lightFiat"
         onChange={({ target }) => pickFiat(target.value)}
       >
         <option value="USD">USD</option>

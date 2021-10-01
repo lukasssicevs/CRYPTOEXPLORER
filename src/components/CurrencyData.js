@@ -96,7 +96,7 @@ const CurrencyData = ({ currency, fiat }) => {
             Crypto Market Cap & Pricing Data Provided By Nomics
           </p>
         </a>
-        <a id="logo"></a>
+        <a id="logo" style={{ visibility: "hidden" }}></a>
       </div>
     );
   }
@@ -104,12 +104,12 @@ const CurrencyData = ({ currency, fiat }) => {
   return (
     <div id="currencyData">
       <div id="data">
-        <h3>Ranking- {rank}</h3>
-        <h3>Symbol- {name}</h3>
-        <h3>Price- {price}</h3>
-        <h3>MarketCap- {cap}</h3>
-        <h3>Daily Volume- {volume}</h3>
-        <h3>Token limit- {limits}</h3>
+        <h3 id="indvData">Ranking: {rank}</h3>
+        <h3 id="indvData">Symbol: {name}</h3>
+        <h3 id="indvData">Price: {price}</h3>
+        <h3 id="indvData">MarketCap: {cap}</h3>
+        <h3 id="indvData">Daily Volume: {volume}</h3>
+        <h3 id="indvData">Token limit: {limits}</h3>
       </div>
       <a id="website" href={link}>
         <img id="logo" src={logo} />
